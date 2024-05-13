@@ -15,7 +15,7 @@ export const Header = () => {
             <div className="lg:max-w-screen-lg mx-auto flex items-center justify-between h-full">
                 <div className="pt-8 pl-4 pb-7 flex items-center gap-x-3">
                     <Image src="/langLogo.png" height={40} width={40} alt="Logo"/>
-                    <h1 className="text-2xl font-extrabold text-brown-400">
+                    <h1 className="text-2xl font-extrabold text-black tracking-wide">
                         DLA
                     </h1>
                 </div>
@@ -27,10 +27,8 @@ export const Header = () => {
                         <UserButton />
                     </SignedIn>
                     <SignedOut>
-                        <SignInButton
-                            mode="modal"
-                            forceRedirectUrl="/learn"
-                        >
+                        <SignInButton mode="modal"
+                            fallbackRedirectUrl="/learn">
                             <Button size="lg" variant="ghost">
                                 Login
                             </Button>
